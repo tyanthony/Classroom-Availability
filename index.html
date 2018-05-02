@@ -1,1 +1,102 @@
-<h1>Hello World!</h1>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Creates a title for the webpage -->
+  <title>Classroom Availability</title>
+
+  <!-- Sets the stylesheets -->
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="icon" href="clemson_paw.ico">
+
+  <!-- Bootstrap stuff -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- Creates a link back to the main page -->
+  <nav class="navbar navbar-custom">
+    <span class="navbar-text">
+      <a class="home-link" href="index.html" onclick="loadRoom(0)"><h2>Classroom Availability</h2></a>
+    </span>
+    <!-- Only shows specific buttons based on if the user is logged in or not -->
+    <div id="nav-list">
+      <ul id="list">
+        <script type="text/javascript">
+          if (window.sessionStorage.getItem('user_type') == 'logged_in') {
+            document.write('<li class="nav-item">');
+            document.write('<a class="nav-link" href="reservation.html" id="res-button">New Reservation</a>');
+            document.write('</li>');
+            document.write('<li class="nav-item">');
+            document.write('<a class="nav-link" href="edit_reservation.php" id="res-button">Edit Reservation</a>');
+            document.write('</li>');
+          }
+          else {
+            document.write('<li class="nav-item ">');
+            document.write('<a class="nav-link" href="login.html" id="login-button">Login</a>');
+            document.write('</li>');
+          }
+        </script>
+      </ul>
+    </div>
+  </nav>
+  <!-- Sets up the table that displays the Google Calendars -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <ul class="navbar-side">
+          <label for="rooms" style="color: #ffffff;"><h4>Rooms:</h4></label>
+          <a class="nav-link active" href="#" onclick="loadRoom(1)" id="110Blink">110B</a>
+          <a class="nav-link active" href="#" onclick="loadRoom(2)" id="110Dlink">110D</a>
+          <a class="nav-link active" href="#" onclick="loadRoom(3)" id="114link">114</a>
+        </ul>
+      </div>
+
+      <!-- container to hold the calendars and welcome information -->
+      <div class="col">
+        <div class="landing-page" style="display: block;" id="landing-page">
+          <h2>Welcome to Classroom Availability!</h2>
+          <br>
+          <p>Select a room to get started</p>
+        </div>
+        <div class="room110B" style="display: none;" id="110B">
+          <div class="locationDiv">
+            <label for="roomLabel">Classroom: </label>
+            <label for="roomNumber" id="roomNumber">McAdams 110B</label>
+          </div>
+          <div class="calendarDiv">
+            <iframe src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vrhlnmqrp3va3b01qmqsbrmo8o%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="room110D"  style="display: none;" id="110D">
+          <div class="locationDiv">
+            <label for="roomLabel">Classroom: </label>
+            <label for="roomNumber" id="roomNumber">McAdams 110D</label>
+          </div>
+          <div class="calendarDiv">
+            <iframe src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=49u6s1ln2fk3h78hbvfgldsie8%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="room114" style="display: none;" id="114">
+          <div class="locationDiv">
+            <label for="roomLabel">Classroom: </label>
+            <label for="roomNumber" id="roomNumber">McAdams 114</label>
+          </div>
+          <div class="calendarDiv">
+            <iframe src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vi70qaf17scmc1icgpbncg083s%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/home-script.js"></script>
+</body>
+</html>

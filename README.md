@@ -1,2 +1,4 @@
-# Classroom-Availabilty
-CPSC 4910 senior project. Goal is to create a website that allows students and faculty to view and reserve classrooms.
+# s18-classroom-availability
+
+The link to the website can be found here:
+https://clemson-cpsc-4910.github.io/s18-classroom-availability/

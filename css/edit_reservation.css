@@ -1,0 +1,28 @@
+.navbar-custom {
+  background-color: #990099;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.home-link {
+  color: #ffffff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

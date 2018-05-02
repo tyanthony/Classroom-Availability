@@ -1,0 +1,51 @@
+<!doctype html>
+<!--This file is the HTML code for the Login Page-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--puts a title for the webpage-->
+  <title>Classroom Availability</title>
+
+  <!--Sets the CSS file to pull from, along with setting the CLemson Paw as the icon-->
+  <link rel="stylesheet" href="css/login.css?v=1.0">
+  <link rel="icon" href="clemson_paw.ico">
+
+  <!-- Bootstrap stuff -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<!--Body of the HTML-->
+<body>
+  <!--Creates a link for when someone licks on the Classroom Availability title in the top left-->
+  <nav class="navbar navbar-custom">
+    <span class="navbar-text">
+      <a class="home-link" href="index.html"><h2>Classroom Availability</h2></a>
+    </span>
+  </nav>
+  <!--Creates a Login form-->
+  <form id="login">
+    <div class="wrapper">
+      <!--Creates a username and password field for the user to input their credentials-->
+      <label for="username" class="col-10">User Name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="username">
+      </div>
+      <label for="password" class="col-10 padded">Password</label>
+      <div class="col-10">
+        <input class="form-control" type="password" id="password">
+      </div>
+      <!--Creates a Submit button that calls the JS Function 'check' to check the user's credientials.-->
+      <div class="col-10 padded">
+        <button type="reset" class="btn btn-primary" style="float: right;" onclick="check(this.form)" id="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Scripts -->
+  <script src="scripts/login.js"></script>
+</body>
+</html>

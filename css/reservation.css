@@ -1,0 +1,23 @@
+.navbar-custom {
+  background-color: #990099;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.home-link {
+  color: #ffffff;
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+}
+
+.padded {
+	margin: auto;
+	width: 95%;
+	padding-top: 25px;
+}

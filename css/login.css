@@ -1,0 +1,23 @@
+.navbar-custom {
+  background-color: #990099;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.home-link {
+  color: #ffffff;
+}
+
+.wrapper {
+	margin: auto;
+	width: 20%;
+	padding-top: 10px;
+
+}
+
+.padded {
+	padding-top: 10px;
+}

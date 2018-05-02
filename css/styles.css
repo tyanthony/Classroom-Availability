@@ -1,0 +1,69 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.home-link {
+  color: #ffffff;
+}
+
+.navbar-custom {
+  background-color: #990099;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.container-fluid {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  display: table;
+}
+
+.row {
+  float: none;
+  height: 100%;
+  width: 100%;
+  display: table-row;
+}
+
+.col {
+  height: 100%;
+  padding: 15px;
+}
+
+.col-2 {
+  background-color: #999999;
+  height: 100%;
+}
+
+label {
+  padding: 10px;
+}
+
+.locationDiv {
+  width: auto;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.calendarDiv {
+  padding-left: 30px;
+}
+
+.landing-page {
+
+}
+
+#nav-list ul{
+  list-style: none;
+}
+#nav-list li{
+  display: inline-block;
+}

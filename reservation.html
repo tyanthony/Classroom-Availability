@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Classroom Availability</title>
+  <link rel="icon" href="clemson_paw.ico">
+
+  <link rel="stylesheet" href="css/reservation.css?v=1.0">
+
+  <!-- Bootstrap stuff -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+</head>
+<body>
+  <nav class="navbar navbar-custom">
+    <span class="navbar-text">
+      <a class="home-link" href="index.html"><h2>Classroom Availability</h2></a>
+    </span>
+    <ul class="navbar-nav ml-auto">
+    	<script type="text/javascript">
+          if (window.sessionStorage.getItem('user_type') !== 'logged_in') {
+            document.write('<li class="nav-item ">');
+            document.write('<a class="nav-link" href="login.html" id="login-button">Login</a>');
+            document.write('</li>');
+          }
+        </script>
+    </ul>
+  </nav>
+  <div class="row-1 title">
+  	<label>Add Room Reservation</label>
+  </div>
+  <form id="add_res">
+	  <div class="padded">
+		  <div class="form-group row">
+			  <label for="room-selection" class="col-2 col-form-label">Room</label>
+			  <div class="col-3">
+			    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="room">
+				    <option selected>Select from the following</option>
+				    <option value="1">McAdams 114</option>
+				    <option value="2">McAdams 110B</option>
+				    <option value="3">McAdams 110D</option>
+				  </select>
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="date-start" class="col-2 col-form-label">Start Date</label>
+			  <div class="col-3">
+			    <input class="form-control" type="date" id="s-date" required>
+			  </div>
+			  <label for="date-end" class="col-2 col-form-label">End Date</label>
+			  <div class="col-3">
+			    <input class="form-control" type="date" id="e-date" required>
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="time-start" class="col-2 col-form-label">Start Time</label>
+			  <div class="col-3">
+			    <input class="form-control" type="time" id="s-time" required>
+			  </div>
+			  <label for="time-end" class="col-2 col-form-label">End Time</label>
+			  <div class="col-3">
+			    <input class="form-control" type="time" id="e-time" required>
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="repeat-every" class="col-2 col-form-label">Repeat</label>
+			  <div class="col-3">
+			    <select multiple class="form-control" id="repeat">
+			      <option value="1">Every Monday</option>
+			      <option value="2">Every Tuesday</option>
+			      <option value="3">Every Wednesday</option>
+			      <option value="4">Every Thursday</option>
+			      <option value="5">Every Friday</option>
+			      <option value="6">Every Saturday</option>
+			      <option value="7">Every Sunday</option>
+			    </select>
+			  </div>
+			  <label for="reason" class="col-2 col-form-label">Reason</label>
+			  <div class="col-3">
+			    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="reason" required>
+				    <option selected>Select from the following</option>
+				    <option value="1">Class</option>
+				    <option value="2">Meeting</option>
+				    <option value="3">Outside Class Activiity</option>
+				    <option value="4">Other</option>
+				  </select>
+			  </div>
+			</div>
+			<div class="form-group row">
+			  <label for="additional-comments" class="col-2 col-form-label">Additional Comments</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text" id="a-comments">
+			  </div>
+			</div>
+			<div class="col-0">
+        <button type="reset" class="btn btn-primary" style="float: right;" onclick="add_res(this.form, 'add')" id="submit">Submit</button>
+      </div>
+		</div>
+	</form>
+	<script src="scripts/reservation.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+          onload="this.onload=function(){};handleClientLoad()"
+          onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+</body>
+</html>
